@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pulse Festival - Interrogation de découpage React</title>
+
+    <link rel="stylesheet" href="assets/styles.css">
+
+</head>
+<body>
+    <!-- Header avec logo et navigation -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">PF</div>
+                <div class="logo-text">Pulse Festival</div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#concerts">Concerts</a></li>
+                    <li><a href="#arts">Arts &amp; performances</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#infos">Infos pratiques</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero : titre, dates, chiffres clés et affiche -->
+    <section class="hero" id="accueil">
+        <h1 class="hero-title">Pulse Festival</h1>
+        <div class="hero-bar">
+            <div class="hero-dates">
+                <span class="hero-days">09—11</span>
+                <span class="hero-month">Juillet 2027</span>
+            </div>
+            <div class="hero-infos">
+                <span>Musiques, arts numériques et performances</span>
+                <span>Parc des Étangs, Bruxelles</span>
+            </div>
+            <ul class="key-figures">
+                <li class="key-figure">
+                    <span class="key-figure-value">30+</span>
+                    <span class="key-figure-label">Concerts</span>
+                </li>
+                <li class="key-figure">
+                    <span class="key-figure-value">12</span>
+                    <span class="key-figure-label">Performances</span>
+                </li>
+                <li class="key-figure">
+                    <span class="key-figure-value">4</span>
+                    <span class="key-figure-label">Scènes</span>
+                </li>
+                <li class="key-figure">
+                    <span class="key-figure-value">3</span>
+                    <span class="key-figure-label">Jours</span>
+                </li>
+            </ul>
+            <div class="hero-actions">
+                <a href="#concerts" class="btn btn-primary">Voir les concerts →</a>
+                <a href="#arts" class="btn btn-outline">Arts &amp; performances</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="assets/images/affiche-2027.svg" alt="Affiche du Pulse Festival 2027">
+        </div>
+    </section>
+
+    <!-- Section Concerts -->
+    <section class="artists-section" id="concerts">
+        <div class="section-header">
+            <div>
+                <span class="section-label">Line-up 2027</span>
+                <h2 class="section-title">Concerts</h2>
+            </div>
+            <a href="#" class="section-link">Toute la programmation →</a>
+        </div>
+        <div class="artists-grid">
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/orage-minuit.svg" alt="Orage Minuit">
+                    <span class="artist-badge">Tête d'affiche</span>
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Rock alternatif</span>
+                    <h3 class="artist-name">Orage Minuit</h3>
+                    <div class="artist-schedule">
+                        <span>Samedi</span>
+                        <span>22:00</span>
+                        <span>Grande Scène</span>
+                    </div>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/neon-safari.svg" alt="Néon Safari">
+                    <span class="artist-badge">Complet</span>
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Électro</span>
+                    <h3 class="artist-name">Néon Safari</h3>
+                    <div class="artist-schedule">
+                        <span>Vendredi</span>
+                        <span>20:30</span>
+                        <span>Grande Scène</span>
+                    </div>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/velours-noir.svg" alt="Velours Noir">
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Soul</span>
+                    <h3 class="artist-name">Velours Noir</h3>
+                    <div class="artist-schedule">
+                        <span>Vendredi</span>
+                        <span>22:15</span>
+                        <span>Chapiteau</span>
+                    </div>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/kilowatt-club.svg" alt="Kilowatt Club">
+                    <span class="artist-badge">Nouveau</span>
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Techno</span>
+                    <h3 class="artist-name">Kilowatt Club</h3>
+                    <div class="artist-schedule">
+                        <span>Samedi</span>
+                        <span>19:00</span>
+                        <span>Dôme</span>
+                    </div>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/atlas-parade.svg" alt="Atlas Parade">
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Afrobeat</span>
+                    <h3 class="artist-name">Atlas Parade</h3>
+                    <div class="artist-schedule">
+                        <span>Dimanche</span>
+                        <span>17:30</span>
+                        <span>Chapiteau</span>
+                    </div>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/mira-solene.svg" alt="Mira Solène">
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Pop</span>
+                    <h3 class="artist-name">Mira Solène</h3>
+                    <div class="artist-schedule">
+                        <span>Dimanche</span>
+                        <span>21:00</span>
+                        <span>Grande Scène</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section Arts & performances -->
+    <section class="artists-section" id="arts">
+        <div class="section-header">
+            <div>
+                <span class="section-label">Parcours libre</span>
+                <h2 class="section-title">Arts &amp; performances</h2>
+            </div>
+            <a href="#" class="section-link">Tout le parcours →</a>
+        </div>
+        <div class="artists-grid">
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/lumen-drift.svg" alt="Lumen Drift">
+                    <span class="artist-badge">Accès libre</span>
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Installation lumineuse</span>
+                    <h3 class="artist-name">Lumen Drift</h3>
+                    <div class="artist-schedule">
+                        <span>Tous les jours</span>
+                        <span>14:00 – 23:00</span>
+                        <span>Halle 3</span>
+                    </div>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/corps-electriques.svg" alt="Corps Électriques">
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Performance dansée</span>
+                    <h3 class="artist-name">Corps Électriques</h3>
+                    <div class="artist-schedule">
+                        <span>Samedi</span>
+                        <span>18:30</span>
+                        <span>Chapiteau</span>
+                    </div>
+                </div>
+            </article>
+            <article class="artist-card">
+                <div class="artist-image">
+                    <img src="assets/images/synthe-lab.svg" alt="Synthé Lab">
+                    <span class="artist-badge">Dès 8 ans</span>
+                </div>
+                <div class="artist-content">
+                    <span class="artist-category">Atelier</span>
+                    <h3 class="artist-name">Synthé Lab</h3>
+                    <div class="artist-schedule">
+                        <span>Dimanche</span>
+                        <span>15:00</span>
+                        <span>Dôme</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">Restez informé·e·s</h2>
+            <p class="newsletter-description">
+                Nouveaux noms, préventes et coulisses du festival : une lettre par mois, pas plus.
+            </p>
+            <form class="newsletter-form">
+                <input type="email" class="email-input" placeholder="Votre adresse email">
+                <button type="submit" class="subscribe-btn">S'inscrire →</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="infos">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Le festival</h3>
+                <ul>
+                    <li><a href="#">Notre histoire</a></li>
+                    <li><a href="#">L'équipe</a></li>
+                    <li><a href="#">Bénévoles</a></li>
+                    <li><a href="#">Presse</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Infos pratiques</h3>
+                <ul>
+                    <li><a href="#">Accès</a></li>
+                    <li><a href="#">Camping</a></li>
+                    <li><a href="#">Restauration</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Partenaires</h3>
+                <ul>
+                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="#">Médias</a></li>
+                    <li><a href="#">Institutions</a></li>
+                    <li><a href="#">Devenir partenaire</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Instagram">ig</a>
+                    <a href="#" class="social-icon" title="Facebook">fb</a>
+                    <a href="#" class="social-icon" title="TikTok">tt</a>
+                    <a href="#" class="social-icon" title="YouTube">yt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2027 Pulse Festival △ Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
