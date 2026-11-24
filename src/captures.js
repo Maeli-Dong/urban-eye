@@ -1,81 +1,78 @@
-// Urban Eye : des captures de démonstration (Applications multimédia, séance 13).
-// Les vraies photos arriveront avec la caméra du téléphone ; d'ici là, une image
-// par catégorie, la forme de l'écran de lancement de la séance 12.
-// Les couleurs sont provisoires : celles de votre direction artistique les remplaceront.
+// Urban Eye : huit captures de démonstration.
+// Les vraies photos arriveront avec l'appareil photo du téléphone, et les vraies
+// données avec l'API. D'ici là, une image par catégorie.
+// Ce fichier ne contient QUE des données : ni couleur ni police.
+// L'apparence de chaque catégorie est dans theme.js.
 
 import stickerImage from './assets/images/capture-sticker.png';
 import enseigneImage from './assets/images/capture-enseigne.png';
 import graffImage from './assets/images/capture-graff.png';
 import wtfImage from './assets/images/capture-wtf.png';
 
-// ==========================================
-// LES QUATRE CATÉGORIES
-// couleur : le fond de la pastille ; encre : la couleur de son texte
-// ==========================================
-export const categories = {
-  stickers: { label: "Stickers", couleur: "#FFD23F", encre: "#111216" },
-  enseignes: { label: "Enseignes & Typographies", couleur: "#2F6BFF", encre: "#FFFFFF" },
-  graff: { label: "Illustrations & Graff", couleur: "#FF4FA3", encre: "#111216" },
-  wtf: { label: "WTF", couleur: "#B8FF3C", encre: "#111216" }
-};
-
-// ==========================================
-// LES CAPTURES
-// categorie : une clé de l'objet categories ci-dessus
-// ==========================================
+// categorie : une clé de l'objet categories de theme.js
 export const captures = [
   {
     id: 1,
     image: stickerImage,
-    alt: "Capture de démonstration, catégorie Stickers",
-    titre: "Chat masqué",
-    categorie: "stickers",
-    lieu: "Rue Haute",
-    date: "04/11/2026"
+    titre: 'Chat masqué',
+    categorie: 'stickers',
+    lieu: 'Rue Haute',
+    date: '04/11/2026',
   },
   {
     id: 2,
     image: enseigneImage,
-    alt: "Capture de démonstration, catégorie Enseignes et typographies",
-    titre: "Friterie, lettres peintes",
-    categorie: "enseignes",
-    lieu: "Place Jourdan",
-    date: "05/11/2026"
+    titre: 'Friterie, lettres peintes',
+    categorie: 'enseignes',
+    lieu: 'Place Jourdan',
+    date: '05/11/2026',
   },
   {
     id: 3,
     image: graffImage,
-    alt: "Capture de démonstration, catégorie Illustrations et graff",
-    titre: "Baleine sur un pignon",
-    categorie: "graff",
-    lieu: "Quai des Charbonnages",
-    date: "05/11/2026"
+    titre: 'Baleine sur un pignon',
+    categorie: 'graff',
+    lieu: 'Quai des Charbonnages',
+    date: '05/11/2026',
   },
   {
     id: 4,
     image: wtfImage,
-    alt: "Capture de démonstration, catégorie WTF",
-    titre: "Un fauteuil sur un abribus",
-    categorie: "wtf",
-    lieu: "Avenue Louise",
-    date: "06/11/2026"
+    titre: 'Un fauteuil sur un abribus',
+    categorie: 'wtf',
+    lieu: 'Avenue Louise',
+    date: '06/11/2026',
   },
   {
     id: 5,
     image: stickerImage,
-    alt: "Capture de démonstration, catégorie Stickers",
-    titre: "Oeil fluo sur un poteau",
-    categorie: "stickers",
-    lieu: "Gare du Midi",
-    date: "07/11/2026"
+    titre: 'Oeil fluo sur un poteau',
+    categorie: 'stickers',
+    lieu: 'Gare du Midi',
+    date: '07/11/2026',
   },
   {
     id: 6,
     image: enseigneImage,
-    alt: "Capture de démonstration, catégorie Enseignes et typographies",
     titre: "Néon d'une ancienne pharmacie",
-    categorie: "enseignes",
+    categorie: 'enseignes',
     lieu: "Chaussée d'Ixelles",
-    date: "08/11/2026"
-  }
+    date: '08/11/2026',
+  },
+  {
+    id: 7,
+    image: graffImage,
+    titre: 'Renard sous le pont',
+    categorie: 'graff',
+    lieu: 'Rue Gray',
+    date: '09/11/2026',
+  },
+  {
+    id: 8,
+    image: wtfImage,
+    titre: 'Une baignoire sur un balcon',
+    categorie: 'wtf',
+    lieu: 'Parvis de Saint-Gilles',
+    date: '10/11/2026',
+  },
 ];
