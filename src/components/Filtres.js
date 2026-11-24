@@ -1,4 +1,5 @@
 import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
+import { captures } from '../captures';
 import { categories, couleurs, espace, polices, tailles } from '../theme';
 
 // La barre des filtres : « Tout », puis une étiquette par catégorie.
@@ -9,6 +10,10 @@ const Filtres = ({ actif, onChoisir }) => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.barre}>
       {cles.map(cle => {
         const choisi = cle === actif;
+        // Le nombre de captures derrière chaque filtre
+        const nombre = cle === 'tout'
+          ? captures.length
+          : captures.filter(capture => capture.categorie === cle).length;
         return (
           <Pressable
             key={cle}
@@ -16,7 +21,7 @@ const Filtres = ({ actif, onChoisir }) => {
             style={[styles.filtre, choisi && styles.filtreChoisi]}
           >
             <Text style={[styles.texte, choisi && styles.texteChoisi]}>
-              {cle === 'tout' ? 'Tout' : categories[cle].label}
+              {cle === 'tout' ? 'Tout' : categories[cle].label} ({nombre})
             </Text>
           </Pressable>
         );

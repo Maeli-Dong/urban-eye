@@ -1,11 +1,11 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { couleurs, espace, polices, rayon, tailles } from '../theme';
 import Pastille from './Pastille';
 
 // La carte d'une capture : sa photo, sa catégorie, son titre, son lieu et sa date.
 const Carte = ({ capture }) => {
   return (
-    <View style={styles.carte}>
+    <Pressable style={({ pressed }) => [styles.carte, pressed && styles.carteTouchee]}>
       <View style={styles.cadre}>
         <Image source={capture.image} style={styles.image} />
       </View>
@@ -16,7 +16,7 @@ const Carte = ({ capture }) => {
           {capture.lieu} · {capture.date}
         </Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: rayon,
     backgroundColor: couleurs.surface,
+  },
+  carteTouchee: {
+    opacity: 0.8,
+    transform: [{ scale: 0.97 }],
   },
   cadre: {
     aspectRatio: 4 / 5,
