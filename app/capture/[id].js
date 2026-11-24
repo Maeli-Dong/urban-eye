@@ -1,20 +1,37 @@
+import { useEffect, useState } from 'react';
 import { Link, Stack, useLocalSearchParams } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
-import { captures } from '../../src/captures';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import { lireCapture } from '../../src/api';
 import { couleurs, espace, polices, tailles } from '../../src/theme';
 import Fiche from '../../src/components/Fiche';
 
-// L'écran d'une capture. Son adresse : /capture/3
-// On ne reçoit que l'id ; on retrouve la capture dans les données.
+// L'écran d'une capture. Son adresse : /capture/<id>
+// On ne reçoit que l'id ; api.js retrouve la capture.
 export default function EcranCapture() {
   const { id } = useLocalSearchParams();
 
-  // id arrive en texte ('3'), celui des données est un nombre (3) :
-  // on compare les deux en texte.
-  const capture = captures.find(c => String(c.id) === String(id));
+  // undefined : pas encore de réponse ; null : aucune capture avec cet id
+  const [capture, setCapture] = useState(undefined);
 
-  // Une adresse qui ne correspond à aucune capture : /capture/999
-  if (!capture) {
+  // À l'ouverture de l'écran, et si l'id change
+  useEffect(() => {
+    lireCapture(id)
+      .then(setCapture)
+      .catch(() => setCapture(null));
+  }, [id]);
+
+  // 1. En attendant la réponse
+  if (capture === undefined) {
+    return (
+      <View style={styles.ecran}>
+        <Stack.Screen options={{ title: '' }} />
+        <ActivityIndicator size="large" color={couleurs.accent} />
+      </View>
+    );
+  }
+
+  // 2. Aucune capture avec cet id : /capture/999
+  if (capture === null) {
     return (
       <View style={styles.ecran}>
         <Stack.Screen options={{ title: 'Introuvable' }} />
@@ -25,6 +42,7 @@ export default function EcranCapture() {
     );
   }
 
+  // 3. La capture est là
   return (
     <>
       <Stack.Screen options={{ title: capture.titre }} />

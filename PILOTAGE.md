@@ -53,3 +53,9 @@ Une entrée par séance. Quelques lignes par rubrique : des faits, pas des phras
 ### Ce que je ne sais pas encore expliquer
 
 - (à compléter)
+
+## Mardi 24 novembre 2026 - Applications multimédia, séance 17 : l'API de la classe
+
+- Adresse : https://api-amorce.techniques-graphiques.be/public/contributions?page=1 (JSON : items, total, pages ; 24 captures par page).
+- Champs utiles : id, thumb_url (la grille), photo_url (la fiche), category (la pastille), author_pseudo, taken_at (la date), note, lat et lng.
+- Ce qui manque : le titre (note est souvent null) et le nom du lieu (seulement lat et lng) ; taken_at est à remettre au format jour/mois/année, et l'id est un texte, pas un nombre.

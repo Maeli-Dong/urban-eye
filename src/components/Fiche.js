@@ -3,18 +3,19 @@ import { couleurs, espace, polices, tailles } from '../theme';
 import Pastille from './Pastille';
 
 // La fiche d'une capture : la grande photo, puis sa catégorie, son titre,
-// son lieu et sa date. Elle défile si l'écran est petit.
+// son lieu, sa date et son auteur. Elle défile si l'écran est petit.
 const Fiche = ({ capture }) => {
   return (
     <ScrollView style={styles.ecran} contentContainerStyle={styles.contenu}>
       <View style={styles.cadre}>
-        <Image source={capture.image} style={styles.image} />
+        <Image source={capture.photo} style={styles.image} />
       </View>
       <View style={styles.texte}>
         <Pastille categorie={capture.categorie} />
         <Text style={styles.titre}>{capture.titre}</Text>
         <Text style={styles.infos}>{capture.lieu}</Text>
         <Text style={styles.infos}>{capture.date}</Text>
+        <Text style={styles.infos}>Par {capture.auteur}</Text>
       </View>
     </ScrollView>
   );

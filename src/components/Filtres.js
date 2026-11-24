@@ -1,10 +1,10 @@
 import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
-import { captures } from '../captures';
 import { categories, couleurs, espace, polices, tailles } from '../theme';
 
 // La barre des filtres : « Tout », puis une étiquette par catégorie.
 // actif : la clé choisie ('tout', 'stickers'...) ; onChoisir : la fonction à appeler.
-const Filtres = ({ actif, onChoisir }) => {
+// captures : la liste reçue du serveur, pour compter derrière chaque filtre.
+const Filtres = ({ actif, onChoisir, captures }) => {
   const cles = ['tout', ...Object.keys(categories)];
   return (
     <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.barre}>
