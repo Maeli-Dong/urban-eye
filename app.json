@@ -2,6 +2,7 @@
   "expo": {
     "name": "Urban Eye Maeli",
     "slug": "urban-eye-prof",
+    "scheme": "urbaneye",
     "owner": "heff-3ti",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -30,6 +31,10 @@
       "eas": {
         "projectId": "d8449b64-9f85-44d3-8fed-b8212c9921e0"
       }
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar"
+    ]
   }
 }
